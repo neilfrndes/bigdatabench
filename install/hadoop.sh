@@ -14,10 +14,10 @@ echo $JAVA_HOME
 # Download HDFS
 if [[ $ARCH == "aarch64" ]]; then
   echo "Downloading ARM64 binary"
-  wget -nc https://mirrors.ocf.berkeley.edu/apache/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION-aarch64.tar.gz -O /tmp/hadoop.tar.gz
+  wget -nc http://mirror.cogentco.com/pub/apache/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION-aarch64.tar.gz -O /tmp/hadoop.tar.gz
 else
 echo "Downloading x86_64 binary"
-  wget -nc https://mirrors.ocf.berkeley.edu/apache/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz -O /tmp/hadoop.tar.gz
+  wget -nc http://mirror.cogentco.com/pub/apache/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz -O /tmp/hadoop.tar.gz
 fi
 sudo tar -xf /tmp/hadoop.tar.gz -C /usr/local/
 sudo ln -s /usr/local/hadoop-$HADOOP_VERSION/ $HADOOP_HOME
